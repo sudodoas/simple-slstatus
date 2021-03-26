@@ -64,20 +64,36 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
 	/* function format          argument */
-    { netspeed_rx, "  %sB/s |",     "wlp9s0" },
-
-    { run_command, "  %4s |",             "pacman -Q | wc -l" },
-    { battery_perc, "  %3s%% |",     "BAT1" },
-    { run_command, "  %4s |",             "amixer sget Master | awk -F\"[][]\" '/%/ { print$2 }' | head -n1" },
-//    { datetime, " %s ",           " %a %d %b"},
-	{ datetime, " %s ",           "  %d %b |  %T"},
-
-
-
-//    { run_command, " %4s |",             "pacman -Q | wc -l" },
+//    { netspeed_rx, "  %sB/s |",     "wlp9s0" },
+//
+//    { run_command, "  %4s |",             "pacman -Q | wc -l" },
 //    { battery_perc, "  %3s%% |",     "BAT1" },
-//    { run_command, "  %4s |",             "amixer sget Master | awk -F\"[][]\" '/%/ { print$2 }' | head -n1" },
-//	{ datetime, " %s ",           "  %d %b |  %T"},
+//    { run_command, "  %4s |",             "amixer sget Master | awk -F\"[][]\" '/%/ { print$2 }' | head -n1" },
+//    { datetime, " %s ",           " %a %d %b"},
+//	{ datetime, " %s ",           "  %d %b |  %T"},
 
+   
+
+
+
+
+    //{ netspeed_rx, " net %sB/s |",     "wlp9s0" },
+
+    //{ run_command, " pkg %4s |",             "pacman -Q | wc -l" },
+    //{ battery_perc, " bat %3s%% |",     "BAT1" },
+    //{ run_command, " vol %4s |",             "amixer sget Master | awk -F\"[][]\" '/%/ { print$2 }' | head -n1" },
+    ////{ datetime, " %s ",           " %a %d %b"},
+	//{ datetime, " %s ",           " date %d %b | time %T"},
+
+
+
+
+    { netspeed_rx, "   %sB/s |",     "wlp9s0" },
+
+    { run_command, "   %4s |",             "pacman -Q | wc -l" },
+    { battery_perc, "   %3s%% |",     "BAT1" },
+    { run_command, "   %4s |",             "amixer sget Master | awk -F\"[][]\" '/%/ { print$2 }' | head -n1" },
+    //{ datetime, " %s ",           " %a %d %b"},
+	{ datetime, " %s ",           "   %d %b |   %T"},
 
 };
